@@ -16,5 +16,54 @@ console.log ("Welcome! Prepare to start your new adventure!");
 
 //functions
 var arrayFunction = function (argArray) {
+	var raceLength = argArray.length;
+	
 	console.log ( "You can choose from " + argArray + " to be your race."  );
+    for ( var i = 0; i <  raceLength; i++ ){
+		
+        }
 }
+
+
+
+
+
+
+
+
+
+//=============================================================
+
+// JSON Document
+
+var jsonData = {
+	
+	"classSpecs":
+	      [
+		         {
+					 "classOption": "Paladin",
+					 "specialMove": "LightFury",
+					 "armor":       "Plate",
+					 "hitPower":    "90"
+				 },
+				 {
+					 "classOption":  "Druid",
+					 "specialMove":  "LifeSteal",
+					 "armor":        "Leather",
+					 "hitPower":     "75"
+				 },
+				 {   "classOption":   "Mage",
+				     "specialMove":   "Curse",
+					 "armor":         "Cloth",
+					 "hitPower":      "85"
+				 }
+			]
+	
+}
+
+
+
+
+//=============================================================	 
+//Main Code
+arrayFunction(characterRaces);
