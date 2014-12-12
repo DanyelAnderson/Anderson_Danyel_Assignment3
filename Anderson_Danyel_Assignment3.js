@@ -11,6 +11,8 @@ var characterRaces = [  "Tauren", "NightElf", "Orc", "Human", "Goblin", "Gnome" 
 var characterGender = [ "Male", "Female"];
 var maxLevel = 100;
 var playedBefore = true;
+var yes = true;
+
 
 //============================================================
 
@@ -22,6 +24,7 @@ console.log ("Welcome! Prepare to start your new adventure!");
 //=============================================================
 
 // JSON Document
+
 
 var jsonData = {
 	
@@ -74,13 +77,16 @@ var myJSON = function() {
 
 
 
-
+myJSON();
 
 
 
 //==============================================================
 
-//functions
+//Functions
+
+
+//ArrayFunction
 
 var arrayFunction = function (characterRaces) {
 	var raceLength = characterRaces.length;
@@ -107,6 +113,20 @@ var arrayFunction = function (characterRaces) {
 
 };
 
+arrayFunction(characterRaces);
+
+
+//Procedure Function
+var readyToBegin = function( yes ) { //conditional
+	if (yes === true ) {
+		console.log ("Let's Begin!");
+		
+	} else { 
+	  console.log ( " We shall play later!");
+	  
+	}
+};
+
 
 
 
@@ -114,20 +134,37 @@ var arrayFunction = function (characterRaces) {
 
 console.log ("It seems we have and experienced player here.");
       
-	  var playerSkilled = {
-		  skills : function ( playedBefore ){
-			  if( playedBefore > 1 ){
-				  var skilled = true
-				  return skilled;
-			  }else{
-				  var unSkilled = false
-				  return unskilled;
-			  }
-	   }
-};
+	var experience = function (played, skills) {
+		if ( played > 3 ) {
+			if (skills === "great") { //nested conditional
+			console.log (" This will be easy to go through.");
+			return true;
+			
+		}else{
+			console.log("We should take our time and pay attention. ");
+			return true;
+			
+		}
+	}
+	else if ( played > 1 || skills === " We should go through the tutorial.") {
+		return true;
 	
-console.log ( " I have played this game it is " + playerSkilled.skills (3) + "  ,and I know my way around a little bit. ")
+	}else{
+		  return false;
+		  
+	}
+};
+		
+//Function with argument/return
 
+var gear = function ( helm, chest, weapon) {
+	var gearSpecs = {
+		head : helm,
+		top: chest,
+		hand: weapon,
+	};
+	return gearSpecs
+};
 
 
 
@@ -155,11 +192,14 @@ console.log (" All levels have been completed at now the real fun can begin. "  
 
 
 
+
 //=============================================================
 
 
 //=============================================================	 
 //Main Code
-arrayFunction(characterRaces);
-var myJSON = function() {}
+
+
+
+
 
