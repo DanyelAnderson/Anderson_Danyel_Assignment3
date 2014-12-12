@@ -180,7 +180,7 @@ var gear = function ( helm, chest, weapon) {
 		endingLevel = endingLevel -1;
 	   };
 
-console.log (" All levels have been completed at now the real fun can begin. "  );
+console.log (" All levels have been completed at now the real fun can begin. " );
 			
 			
 
